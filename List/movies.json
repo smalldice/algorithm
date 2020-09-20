@@ -1,0 +1,84 @@
+{
+  "movies": [
+    {
+      "name": "Ths Shawshank Redemption",
+      "zh-name": "《肖申克的救赎》"
+    },
+    {
+      "name": "The GodFather",
+      "zh-name": "《教父》"
+    },
+    {
+      "name": "The GodFather: Part2",
+      "zh-name": "《教父2》"
+    },
+    {
+      "name": "Pulp Fiction",
+      "zh-name": "《低俗小说》"
+    },
+    {
+      "name": "The Good, the Bad and the Ugly",
+      "zh-name": "《黄金三镖客》"
+    },
+    {
+      "name": "12 Angry Man",
+      "zh-name": "《十二怒汉》"
+    },
+    {
+      "name": "Schindler's List",
+      "zh-name": "《辛德勒名单》"
+    },
+    {
+      "name": "The Dark Knight",
+      "zh-name": "《黑暗骑士》"
+    },
+    {
+      "name": "The Lord of the Rings: The Return of the King",
+      "zh-name": "《指环王：王者归来》"
+    },
+    {
+      "name": "Fight Club",
+      "zh-name": "《搏击俱乐部》"
+    },
+    {
+      "name": "Star Wars: Episode V - The Empire Strikes Back",
+      "zh-name": "《星球大战5：帝国反击战》"
+    },
+    {
+      "name": "One Flew Over the Cuckoos's Nest",
+      "zh-name": "《飞跃疯人院》"
+    },
+    {
+      "name": "The Lord of the Rings: The Fellowship of the Ring",
+      "zh-name": "《指环王：护戒使者》"
+    },
+    {
+      "name": "Inception",
+      "zh-name": "《盗梦空间》"
+    },
+    {
+      "name": "Goodfellas",
+      "zh-name": "《好家伙》"
+    },
+    {
+      "name": "Star Wars",
+      "zh-name": "《星球大战》"
+    },
+    {
+      "name": "Seven Samurai",
+      "zh-name": "《七武士》"
+    },
+    {
+      "name": "The Matrix",
+      "zh-name": "《黑客帝国》"
+    },
+    {
+      "name": "Forrest Gump",
+      "zh-name": "《阿甘正传》"
+    },
+    {
+      "name": "City of God",
+      "zh-name": "《上帝之城》"
+    }
+  ]
+}
