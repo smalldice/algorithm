@@ -8,26 +8,32 @@ class Queue {
   }
 
   dequeue() {
-    this.dataStore.shift()
+    return this.dataStore.shift()
   }
 
   front() {
-    this.dataStore[0]
+    return this.dataStore[0]
   }
 
   back() {
-    this.dataStore[this.dataStore.length - 1]
+    return this.dataStore[this.dataStore.length - 1]
   }
 
-  toString () {
+  toString() {
     let str = ''
-    this.dataStore.forEach(element => {
+    this.dataStore.forEach((element) => {
       str += element + '\n'
     })
     return str
   }
 
   empty() {
-    return !!this.dataStore.length
+    return !this.dataStore.length
+  }
+
+  length() {
+    return this.dataStore.length
   }
 }
+
+module.exports = Queue
