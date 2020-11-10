@@ -40,12 +40,13 @@ class DoubleLinkedList {
     const current = this.find(item)
 
     current.previous.next = current.next ? current.next : null
+    current.next && (current.next.previous = current.previous)
   }
 
   display() {
     let current = this.head
     while (current.next !== null) {
-      console.log(current.next.element)
+      console.log(current.next.element, current.next.previous.element)
       current = current.next
     }
   }
