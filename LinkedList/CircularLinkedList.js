@@ -13,9 +13,9 @@ class CircularLinkedList {
   }
 
   find(item) {
-    let current = this.head.next
+    let current = this.head
 
-    if (current.next === this.head.element) {
+    if (current.next === null || current.next === this.head.element) {
       return current
     }
 
@@ -29,7 +29,45 @@ class CircularLinkedList {
   insert(newElement, item) {
     const newNode = new Node(newElement)
     const curr = this.find(item)
+    if (curr.next === null) {
+      curr.next = newNode
+      newNode.next = curr
+    } else if (curr.next.element === 'head') {
+      curr.next = newNode
+      newNode.next = this.head
+    } else {
+      newNode.next = curr.next
+      curr.next = newNode
+    }
+  }
 
-    newNode.next = curr.next === 'head' ? this.head : curr.next
+  findPrevious(item) {
+    let current = this.head
+
+    while (
+      current.next !== null &&
+      current.next.element !== item &&
+      current.next.element !== 'head'
+    ) {
+      current = current.next
+    }
+
+    return current
+  }
+
+  remove(item) {
+    let pre = this.findPrevious(item)
+    pre.next = pre.next.next
+  }
+
+  display() {
+    let curr = this.head
+
+    while (curr.next !== null && curr.next.element !== 'head') {
+      console.log(curr.next)
+      curr = curr.next
+    }
   }
 }
+
+module.exports = CircularLinkedList

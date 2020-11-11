@@ -2,13 +2,14 @@
 
 // const SingleLList = require('./SingleLinkedList')
 // const cities = new SingleLList()
-const DoubleLinkedList = require('./DoubleLinkedList')
-const cities = new DoubleLinkedList()
-
+// const DoubleLinkedList = require('./DoubleLinkedList')
+// const cities = new DoubleLinkedList()
+const CircularLinkedList = require('./CircularLinkedList')
+const cities = new CircularLinkedList()
 cities.insert('Conway', 'head')
 cities.insert('Russellville', 'Conway')
 cities.insert('Carlisle', 'Russellville')
 cities.insert('Alma', 'Carlisle')
-cities.display()
+// cities.display()
 cities.remove('Carlisle')
 cities.display()
