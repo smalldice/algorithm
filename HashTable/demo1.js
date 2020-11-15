@@ -1,4 +1,4 @@
-const HashTable = require('./HashTable')
+const HashTable = require('./HashTable1')
 const table = new HashTable()
 const names = [
   'David',
