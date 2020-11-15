@@ -18,6 +18,7 @@ names.forEach((name) => {
 
 table.showDistro()
 
+// console.log(table.get('Mike'))
 /**
  * Cynthia 和 Clayton hash 值是一样的 之后Clayton 进入了列表，
  * 这种现象被称为碰撞
