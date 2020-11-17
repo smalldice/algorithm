@@ -66,11 +66,35 @@ class BST {
     }
   }
 
-  inOrder(node) {
-    if (node !== null) {
-      this.inOrder(node.left)
-      this.inOrder(node.right)
+  find(num) {
+    let curr = this.root
+
+    while (curr !== null) {
+      if (curr.data === num) {
+        return curr
+      } else {
+        curr = num < curr.data ? curr.left : curr.right
+      }
     }
+
+    return curr
+  }
+
+  min() {
+    let curr = this.root
+    while (curr.left !== null) {
+      curr = curr.left
+    }
+
+    return curr
+  }
+
+  max() {
+    let curr = this.root
+    while (curr.right !== null) {
+      curr = curr.right
+    }
+    return curr
   }
 }
 
