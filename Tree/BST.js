@@ -11,10 +11,15 @@ class Node {
     this.data = data
     this.left = left
     this.right = right
+    this.count = 1
   }
 
   show() {
     return this.data
+  }
+
+  addCount() {
+    this.count++
   }
 }
 
@@ -55,13 +60,16 @@ class BST {
           parent.left = newNode
           break
         }
-      } else {
+      } else if (data > curr.data) {
         curr = curr.right
 
         if (curr === null) {
           parent.right = newNode
           break
         }
+      } else {
+        this.update(data)
+        break
       }
     }
   }
@@ -82,6 +90,7 @@ class BST {
 
   min() {
     let curr = this.root
+
     while (curr.left !== null) {
       curr = curr.left
     }
@@ -95,6 +104,12 @@ class BST {
       curr = curr.right
     }
     return curr
+  }
+
+  update(data) {
+    const node = this.find(data)
+    node.count++
+    return node
   }
 
   remove() {}
