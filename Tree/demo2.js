@@ -1,4 +1,4 @@
-const BST = require('./BST')
+const { createNumTree } = require('./BST')
 
 function inOrder(node) {
   // 中序遍历
@@ -13,16 +13,7 @@ function inOrder(node) {
   }
 }
 
-const nums = new BST()
+const nums = createNumTree()
 
-nums.insert(23)
-nums.insert(45)
-nums.insert(16)
-nums.insert(37)
-nums.insert(3)
-nums.insert(99)
-nums.insert(22)
-
-console.log('inOrder traversal:')
 inOrder(nums.root)
 console.log(nums)
