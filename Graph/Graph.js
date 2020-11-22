@@ -35,10 +35,11 @@ class Graph {
     this.vertices = v
     this.edges = 0
     this.adj = []
+    this.marked = []
 
     for (var i = 0; i < v; i++) {
+      this.marked[i] = false
       this.adj[i] = []
-      this.adj[i].push('')
     }
   }
 
@@ -47,8 +48,6 @@ class Graph {
     this.adj[w].push(v)
     this.edges++
   }
-
-  toString() {}
 
   show() {
     for (let i = 0; i < this.vertices; i++) {
@@ -59,6 +58,41 @@ class Graph {
         }
       }
       console.log(str)
+    }
+  }
+
+  // 深度优先
+  dfs(v) {
+    this.marked[v] = true
+
+    if (this.adj[v] !== undefined) {
+      console.log('visited: ', v)
+    }
+    for (let w of this.adj[v]) {
+      if (!this.marked[w]) {
+        this.dfs(w)
+      }
+    }
+  }
+
+  // 广度优先
+  bfs(s) {
+    let queue = []
+    this.marked[s] = true
+    queue.push(s)
+    while (queue.length) {
+      let v = queue.shift()
+      if (this.adj[v] !== undefined) {
+        console.log('visited: ', v)
+      }
+
+      for (let w of this.adj[v]) {
+        if (!this.marked[w]) {
+          // this.edgeTo[w] = v
+          this.marked[w] = true
+          queue.push(w)
+        }
+      }
     }
   }
 }
