@@ -11,8 +11,8 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/Graph/demo3.js",
-      "runtimeExecutable": "/usr/local/bin/node"
+      "program": "${workspaceFolder}/geek/demo1.ts",
+      "runtimeExecutable": "/usr/local/bin/ts-node"
     }
   ]
 }
