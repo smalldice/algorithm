@@ -36,6 +36,7 @@ class Graph {
     this.edges = 0
     this.adj = []
     this.marked = []
+    this.edgeTo = []
 
     for (var i = 0; i < v; i++) {
       this.marked[i] = false
